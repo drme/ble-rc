@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
+  <Identity Name="2715sarunas.eu.SmartRacer" Publisher="CN=7D9BE28C-B2EA-4D86-AD9C-4FB84CD44024" Version="2.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="452bdf53-855a-4a7e-ab16-54ab7268c3dc" PhonePublisherId="20642693-8a3f-4f04-83f3-c83becedc491" />
+  <Properties>
+    <DisplayName>SmartRacer</DisplayName>
+    <PublisherDisplayName>sarunas.eu</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.1</OSMinVersion>
+    <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="x452bdf53y855ay4a7eyab16y54ab7268c3dcx" Executable="AGHost.exe" EntryPoint="MainPage.xaml">
+      <m3:VisualElements DisplayName="SmartRacer" Square150x150Logo="Assets\SquareTile150x150.png" Square44x44Logo="Assets\Logo.png" Description="Use your smartphone to control simple RC cars instead of using a remote controller. NOTE: you have to upgrade/hack your RC car according those instructions yourself by adding Bluetooth Smart support to the RC car: https://github.com/drme/ble-rc" ForegroundText="light" BackgroundColor="#464646" ToastCapable="false">
+        <m3:DefaultTile Square71x71Logo="Assets\SquareTile71x71.png">
+        </m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\Splashscreen.png" />
+        <m3:ApplicationView MinWidth="width320" />
+        <!--Used in XAML Designer. DO NOT REMOVE-->
+      </m3:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <m2:DeviceCapability Name="bluetooth.genericAttributeProfile">
+      <m2:Device Id="any">
+        <m2:Function Type="serviceId:1803" />
+        <m2:Function Type="serviceId:0000acc0-0000-1000-8000-00805f9b34fb" />
+        <m2:Function Type="serviceId:a739acc0-f6cd-1692-994a-d66d9e0ce048" />
+      </m2:Device>
+    </m2:DeviceCapability>
+  </Capabilities>
+  <Extensions>
+    <Extension Category="windows.activatableClass.inProcessServer">
+      <InProcessServer>
+        <Path>AgHostSvcs.dll</Path>
+        <ActivatableClass ActivatableClassId="AgHost.BackgroundTask" ThreadingModel="both" />
+      </InProcessServer>
+    </Extension>
+  </Extensions>
+</Package>

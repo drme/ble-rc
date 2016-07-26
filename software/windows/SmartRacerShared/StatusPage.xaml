@@ -1,0 +1,91 @@
+﻿<Page
+    x:Name="pageRoot"
+    x:Class="SmartRacerShared.StatusPage"
+    
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SmartRacerShared"
+    
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="StartStatusUpdate" Unloaded="StopStatusUpdate">
+
+
+    <Page.BottomAppBar>
+        <AppBar x:Name="bottomAppBar" Padding="10,0,10,0" Background="#70b347" Visibility="Visible" IsOpen="True" IsSticky="True">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <AppBarButton AutomationProperties.Name="Sample Button"
+    			AutomationProperties.AutomationId="SampleAppBarButton"
+                              
+    			 Label="Back" Click="CancelClicked">
+                    <AppBarButton.Icon>
+                        <BitmapIcon UriSource="Assets/back.png"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+
+
+    <Page.Resources>
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <x:String x:Key="AppName">Status</x:String>
+    </Page.Resources>
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid Background="Black">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="backButton" Margin="39,59,39,0" 
+                        Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        VerticalAlignment="Top" Click="CloseClicked"
+               
+                        />
+            <TextBlock x:Name="pageTitle" Text="blah racer.." Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
+        </Grid>
+
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="56,50,30,-15">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Main battery" VerticalAlignment="Top" Width="223" FontSize="18.667" Margin="4,0,0,0"/>
+            <ProgressBar HorizontalAlignment="Left" Height="2" Margin="4,32,0,0" VerticalAlignment="Top" Width="468" x:Name="mainBatteryProgress" Maximum="100" MinHeight="5" MinWidth="2"/>
+            <TextBlock HorizontalAlignment="Left" Margin="199,0,0,0" TextWrapping="Wrap" Text="0.0 V" VerticalAlignment="Top" x:Name="mainBatteryVoltage" TextAlignment="Right" Width="111" FontSize="18.667"/>
+            <TextBlock HorizontalAlignment="Left" Margin="390,0,0,0" TextWrapping="Wrap" Text="0.0 %" VerticalAlignment="Top" TextAlignment="Right" x:Name="mainBatteryPercentage" Width="82" FontSize="18.667"/>
+            <TextBlock HorizontalAlignment="Left" Margin="4,57,0,0" TextWrapping="Wrap" Text="Receiver voltage" VerticalAlignment="Top" RenderTransformOrigin="-1.404,-1.582" Width="207" FontSize="18.667"/>
+            <TextBlock HorizontalAlignment="Left" Margin="199,57,0,0" TextWrapping="Wrap" Text="3.3 V" VerticalAlignment="Top" x:Name="cpuVoltage" Width="111" TextAlignment="Right" FontSize="18.667"/>
+            <TextBlock HorizontalAlignment="Left" Margin="390,57,0,0" TextWrapping="Wrap" Text="0.0 %" VerticalAlignment="Top" TextAlignment="Right" x:Name="cpuVoltagePercentage" Width="82" FontSize="18.667"/>
+            <ProgressBar HorizontalAlignment="Left" Height="2" Margin="4,89,0,0" VerticalAlignment="Top" Width="468" x:Name="cpuVoltageProgress" MinHeight="5" MinWidth="2"/>
+            <TextBlock HorizontalAlignment="Left" Margin="4,112,0,0" TextWrapping="Wrap" Text="Current consumption" VerticalAlignment="Top" Width="268" FontSize="18.667"/>
+            <TextBlock HorizontalAlignment="Left" Margin="257,112,0,0" TextWrapping="Wrap" Text="0.000 A" VerticalAlignment="Top" TextAlignment="Right" x:Name="currentConsumption" Width="215" FontSize="18.667"/>
+            <ProgressBar HorizontalAlignment="Left" Height="2" Margin="4,139,0,0" VerticalAlignment="Top" Width="468" x:Name="currentConsumptionProgress" MinHeight="5" MinWidth="2"/>
+            <TextBlock HorizontalAlignment="Left" Margin="4,153,0,0" TextWrapping="Wrap" Text="Receiver temperature" VerticalAlignment="Top" Width="249" FontSize="18.667"/>
+            <TextBlock HorizontalAlignment="Left" Margin="257,155,0,0" TextWrapping="Wrap" Text="21 C" VerticalAlignment="Top" TextAlignment="Right" x:Name="cpuTemperature" Width="215" FontSize="18.667"/>
+            <ProgressBar HorizontalAlignment="Left" Height="2" Margin="4,184,0,0" VerticalAlignment="Top" Width="468" x:Name="cpuTemperatureProgress" MinHeight="5" MinWidth="2"/>
+            <TextBlock HorizontalAlignment="Left" Margin="4,206,0,0" TextWrapping="Wrap" Text="Engine temperature" VerticalAlignment="Top" Width="266" FontSize="18.667"/>
+            <TextBlock HorizontalAlignment="Left" Margin="257,206,0,0" TextWrapping="Wrap" Text="70 C" VerticalAlignment="Top" TextAlignment="Right" x:Name="engineTemperature" Width="215" FontSize="18.667"/>
+            <ProgressBar HorizontalAlignment="Left" Height="2" Margin="4,233,0,0" VerticalAlignment="Top" Width="468" x:Name="engineTemperatureProgress" MinHeight="5" MinWidth="2"/>
+            <TextBlock HorizontalAlignment="Left" Margin="4,261,0,0" TextWrapping="Wrap" Text="Acceleration" VerticalAlignment="Top" Width="236" FontSize="18.667"/>
+            <TextBlock HorizontalAlignment="Left" Margin="257,261,0,0" TextWrapping="Wrap" Text="(0.1; 0.2; 0.3)" VerticalAlignment="Top" Width="215" TextAlignment="Right" x:Name="acceleration" FontSize="18.667"/>
+            <TextBlock HorizontalAlignment="Left" Margin="4,288,0,0" TextWrapping="Wrap" Text="Connection latency" VerticalAlignment="Top" Width="236" FontSize="18.667"/>
+            <TextBlock HorizontalAlignment="Left" Margin="257,288,0,0" TextWrapping="Wrap" Text="10 ms" VerticalAlignment="Top" TextAlignment="Right" x:Name="latency" Width="215" FontSize="18.667"/>
+        </Grid>
+    </Grid>
+</Page>

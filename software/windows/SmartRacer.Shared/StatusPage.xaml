@@ -1,0 +1,61 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="SmartRacer.StatusPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True" Loaded="StartUpdatingStatus" Unloaded="StopUpdatingStatus">
+
+	<!--LayoutRoot is the root grid where all page content is placed-->
+	<Grid x:Name="LayoutRoot" Background="Transparent">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<!--TitlePanel contains the name of the application and page title-->
+		<StackPanel Grid.Row="0" Margin="12,17,0,28">
+			<TextBlock x:Name="TitleBar" Text="Smart Racer" Style="{StaticResource PhoneTextNormalStyle}" Margin="0"/>
+			<TextBlock Text="status" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+		</StackPanel>
+
+		<!--ContentPanel - place additional content here-->
+		<Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="main battery" VerticalAlignment="Top" Width="118"/>
+			<ProgressBar HorizontalAlignment="Left" Height="10" Margin="-12,32,-12,0" VerticalAlignment="Top" Width="480" x:Name="mainBatteryProgress" Maximum="100"/>
+			<TextBlock HorizontalAlignment="Left" Margin="199,0,0,0" TextWrapping="Wrap" Text="0.0 V" VerticalAlignment="Top" x:Name="mainBatteryVoltage" TextAlignment="Right" Width="111"/>
+			<TextBlock HorizontalAlignment="Left" Margin="374,0,0,0" TextWrapping="Wrap" Text="0.0 %" VerticalAlignment="Top" TextAlignment="Right" x:Name="mainBatteryPercentage" Width="82"/>
+			<TextBlock HorizontalAlignment="Left" Margin="0,57,0,0" TextWrapping="Wrap" Text="CPU voltage" VerticalAlignment="Top" RenderTransformOrigin="-1.404,-1.582" Width="118"/>
+			<TextBlock HorizontalAlignment="Left" Margin="199,57,0,0" TextWrapping="Wrap" Text="3.3 V" VerticalAlignment="Top" x:Name="cpuVoltage" Width="111" TextAlignment="Right"/>
+			<TextBlock HorizontalAlignment="Left" Margin="374,57,0,0" TextWrapping="Wrap" Text="0.0 %" VerticalAlignment="Top" TextAlignment="Right" x:Name="cpuVoltagePercentage" Width="82"/>
+			<ProgressBar HorizontalAlignment="Left" Height="18" Margin="-12,89,-12,0" VerticalAlignment="Top" Width="480" x:Name="cpuVoltageProgress"/>
+			<TextBlock HorizontalAlignment="Left" Margin="0,107,0,0" TextWrapping="Wrap" Text="current consumption" VerticalAlignment="Top" Width="194"/>
+			<TextBlock HorizontalAlignment="Left" Margin="241,112,0,0" TextWrapping="Wrap" Text="0.000 A" VerticalAlignment="Top" TextAlignment="Right" x:Name="currentConsumption" Width="215"/>
+			<ProgressBar HorizontalAlignment="Left" Height="11" Margin="-12,139,-12,0" VerticalAlignment="Top" Width="480" x:Name="currentConsumptionProgress"/>
+			<TextBlock HorizontalAlignment="Left" Margin="0,150,0,0" TextWrapping="Wrap" Text="CPU temperature" VerticalAlignment="Top" Width="158"/>
+			<TextBlock HorizontalAlignment="Left" Margin="241,155,0,0" TextWrapping="Wrap" Text="21 C" VerticalAlignment="Top" TextAlignment="Right" x:Name="cpuTemperature" Width="215"/>
+			<ProgressBar HorizontalAlignment="Left" Height="19" Margin="-12,182,-12,0" VerticalAlignment="Top" Width="480" x:Name="cpuTemperatureProgress"/>
+			<TextBlock HorizontalAlignment="Left" Margin="0,201,0,0" TextWrapping="Wrap" Text="engine temperature" VerticalAlignment="Top" Width="181"/>
+			<TextBlock HorizontalAlignment="Left" Margin="241,206,0,0" TextWrapping="Wrap" Text="70 C" VerticalAlignment="Top" TextAlignment="Right" x:Name="engineTemperature" Width="215"/>
+			<ProgressBar HorizontalAlignment="Left" Height="18" Margin="-12,233,-12,0" VerticalAlignment="Top" Width="480" x:Name="engineTemperatureProgress"/>
+			<TextBlock HorizontalAlignment="Left" Margin="0,256,0,0" TextWrapping="Wrap" Text="acceleration" VerticalAlignment="Top" Width="236"/>
+			<TextBlock HorizontalAlignment="Left" Margin="241,261,0,0" TextWrapping="Wrap" Text="(0.1; 0.2; 0.3)" VerticalAlignment="Top" Width="215" TextAlignment="Right" x:Name="acceleration"/>
+			<TextBlock HorizontalAlignment="Left" Margin="0,288,0,0" TextWrapping="Wrap" Text="connection latency" VerticalAlignment="Top" Width="236"/>
+			<TextBlock HorizontalAlignment="Left" Margin="241,293,0,0" TextWrapping="Wrap" Text="10 ms" VerticalAlignment="Top" TextAlignment="Right" x:Name="latency" Width="215"/>
+		</Grid>
+	</Grid>
+
+	<phone:PhoneApplicationPage.ApplicationBar>
+		<shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FF8CC63F" ForegroundColor="White" Mode="Default">
+			<shell:ApplicationBarIconButton IconUri="/Assets/cancel.png" Text="close" Click="BackClicked"/>
+		</shell:ApplicationBar>
+	</phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

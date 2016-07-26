@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.xaml.cpp" />
+    <ClCompile Include="App1Main.cpp" />
+    <ClCompile Include="DirectXPage.xaml.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Common\DeviceResources.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.xaml.h" />
+    <ClInclude Include="App1Main.h" />
+    <ClInclude Include="DirectXPage.xaml.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Common\StepTimer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\DirectXHelper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\DeviceResources.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\transport.play.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\back.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\background.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\cancel.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\folder.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\edit.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\save.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\BadgeLogo.scale-100.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\BadgeLogo.scale-140.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\BadgeLogo.scale-180.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.scale-80.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.scale-100.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.scale-140.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.scale-180.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.targetsize-16.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.targetsize-32.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.targetsize-48.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.targetsize-256.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-100.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-140.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-180.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_126x126.scale-80.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_126x126.scale-100.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_126x126.scale-140.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_126x126.scale-180.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_270x270.scale-80.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_270x270.scale-100.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_270x270.scale-140.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_270x270.scale-180.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_558x558.scale-80.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_558x558.scale-100.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_558x558.scale-140.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_558x558.scale-180.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-100.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-140.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-180.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\WideLogo.scale-80.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\WideLogo.scale-100.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\WideLogo.scale-140.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\WideLogo.scale-180.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\add.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\feature.search.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\sync.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="DirectXPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{fa5e4b2d-7f32-4304-8a87-847612cbb947}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Logo">
+      <UniqueIdentifier>{fbb95abc-3203-4fd9-8e3b-1b48755f3ec0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{41daba41-b653-443f-9bb8-1c1ef9b43d25}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Common\StandardStyles.xaml">
+      <Filter>Common</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package.StoreAssociation.xml" />
+    <None Include="BleZee.WinRT_StoreKey.pfx" />
+  </ItemGroup>
+</Project>

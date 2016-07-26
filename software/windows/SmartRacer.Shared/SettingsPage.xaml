@@ -1,0 +1,75 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="SmartRacer.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+	<Grid x:Name="LayoutRoot" Background="Transparent">
+		<phone:Pivot Title="Smart Racer" x:Name="pages">
+			<phone:PivotItem Header="general">
+				<Grid>
+					<TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="car name" VerticalAlignment="Top" RenderTransformOrigin="0.158,-0.597"/>
+                    <TextBox HorizontalAlignment="Left" Height="72" Margin="0,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="456" x:Name="carNameTextBox"/>
+					<CheckBox Content="use accelerometer for steering" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" x:Name="useAccelerometerCheckBox" Width="436"/>
+					<CheckBox Content="invert steering" HorizontalAlignment="Left" Margin="10,186,0,0" VerticalAlignment="Top" x:Name="invertSteeringCheckBox" Width="436"/>
+					<CheckBox Content="invert throttle" HorizontalAlignment="Left" Margin="10,258,0,0" VerticalAlignment="Top" x:Name="invertThrottleCheckBox" Width="436"/>
+				</Grid>
+			</phone:PivotItem>			
+			<phone:PivotItem Header="steering" x:Name="steeringPage">
+				<Grid>
+					<TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.486,-0.403" Width="436"/>
+					<Slider HorizontalAlignment="Left" Margin="0,42,-12,0" VerticalAlignment="Top" Width="468" Height="99" x:Name="steeringLeftSlider" Maximum="4000" Minimum="0" Value="{Binding ElementName=steeringLeftValue,Path=Text}" ManipulationDelta="TrySteeringLeft" ManipulationCompleted="FinishSteeringTry"/>
+					<TextBlock HorizontalAlignment="Left" Height="31" Margin="364,10,0,0" TextWrapping="Wrap" Text="{Binding ElementName=steeringLeftSlider,Path=Value,StringFormat=0.0}" VerticalAlignment="Top" Width="92" TextAlignment="Right" />
+					<TextBlock HorizontalAlignment="Left" Height="38" Margin="364,119,0,0" TextWrapping="Wrap" Text="{Binding ElementName=steeringRightSlider, Path=Value,StringFormat=0.0}" VerticalAlignment="Top" Width="92" RenderTransformOrigin="0.477,0.232" TextAlignment="Right"/>
+					<Slider HorizontalAlignment="Left" Margin="0,151,0,0" VerticalAlignment="Top" Width="456" x:Name="steeringRightSlider" Maximum="4000" ManipulationCompleted="FinishSteeringTry" ManipulationDelta="TrySteeringRight"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,119,0,0" TextWrapping="Wrap" Text="Right" VerticalAlignment="Top"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,235,0,0" TextWrapping="Wrap" Text="Center" VerticalAlignment="Top"/>
+					<Slider HorizontalAlignment="Left" Margin="0,262,0,0" VerticalAlignment="Top" Width="456" x:Name="steeringCenterSlider" Maximum="4000" ManipulationDelta="TrySteeringCenter"/>
+					<TextBlock HorizontalAlignment="Left" Height="24" Margin="364,240,0,0" TextWrapping="Wrap" Text="{Binding ElementName=steeringCenterSlider, Path=Value,StringFormat=0.0}" VerticalAlignment="Top" Width="92" TextAlignment="Right"/>
+				</Grid>
+			</phone:PivotItem>
+			<phone:PivotItem Header="throttle" x:Name="throttlePage">
+				<Grid>
+					<TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Reverse" VerticalAlignment="Top" RenderTransformOrigin="-0.486,-0.403" Width="436"/>
+					<Slider HorizontalAlignment="Left" Margin="0,42,0,0" VerticalAlignment="Top" Width="456" Height="99" x:Name="throttleReverseSlider" Maximum="1000" ManipulationCompleted="FinishThrottleTry" ManipulationDelta="TryThrottleReverse"/>
+					<TextBlock HorizontalAlignment="Left" Height="32" Margin="354,20,0,0" TextWrapping="Wrap" Text="{Binding ElementName=throttleReverseSlider, Path=Value,StringFormat=0.0}" VerticalAlignment="Top" Width="92" TextAlignment="Right" />
+					<TextBlock HorizontalAlignment="Left" Height="38" Margin="354,119,0,0" TextWrapping="Wrap" Text="{Binding ElementName=throttleForwardSlider, Path=Value,StringFormat=0.0}" VerticalAlignment="Top" Width="92" TextAlignment="Right"/>
+					<Slider HorizontalAlignment="Left" Margin="0,151,0,0" VerticalAlignment="Top" Width="456" x:Name="throttleForwardSlider" Maximum="1000" ManipulationDelta="TryThrottleForward" ManipulationCompleted="FinishThrottleTry"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,119,0,0" TextWrapping="Wrap" Text="Forward" VerticalAlignment="Top"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,235,0,0" TextWrapping="Wrap" Text="Coast" VerticalAlignment="Top"/>
+					<Slider HorizontalAlignment="Left" Margin="0,262,0,0" VerticalAlignment="Top" Width="446" x:Name="throttleCenterSlider" ManipulationDelta="TryThrottleCenter" Maximum="1000"/>
+					<TextBlock HorizontalAlignment="Left" Height="22" Margin="354,240,0,0" TextWrapping="Wrap" Text="{Binding ElementName=throttleCenterSlider, Path=Value,StringFormat=0.0}" VerticalAlignment="Top" Width="92" TextAlignment="Right"/>
+				</Grid>
+			</phone:PivotItem>
+			<phone:PivotItem Header="power">
+				<Grid>
+					<TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Battery Voltage (mV)" VerticalAlignment="Top" RenderTransformOrigin="0.56,-0.203"/>
+					<TextBox HorizontalAlignment="Left" Height="72" Margin="0,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="456" x:Name="batteryVoltageTextBox" InputScope="Number"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,119,0,0" TextWrapping="Wrap" Text="Battery Capacity (mAh)" VerticalAlignment="Top"/>
+					<TextBox HorizontalAlignment="Left" Height="72" Margin="0,151,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="456" x:Name="batteryCapacityTextBox" InputScope="Number"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,228,0,0" TextWrapping="Wrap" Text="Min voltage (mV)" VerticalAlignment="Top"/>
+					<TextBox HorizontalAlignment="Left" Height="72" Margin="0,260,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="456" x:Name="minBatteryVoltageTextBox" InputScope="Number"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,332,0,0" TextWrapping="Wrap" Text="Max Current (mA)" VerticalAlignment="Top"/>
+					<TextBox HorizontalAlignment="Left" Height="72" Margin="0,364,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="456" x:Name="maxCurrentTextBox" InputScope="Number"/>
+				</Grid>
+			</phone:PivotItem>
+
+		</phone:Pivot>
+	</Grid>
+
+	<phone:PhoneApplicationPage.ApplicationBar>
+		<shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FF8CC63F" ForegroundColor="White" Mode="Default">
+			<shell:ApplicationBarIconButton  IconUri="/Assets/save.png" Text="save" Click="SaveSettingsClicked"/>
+			<shell:ApplicationBarIconButton  IconUri="/Assets/cancel.png" Text="cancel" Click="CanceButtonClicked"/>
+		</shell:ApplicationBar>
+	</phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

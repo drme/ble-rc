@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.xaml.cpp" />
+    <ClCompile Include="App1Main.cpp" />
+    <ClCompile Include="DirectXPage.xaml.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Common\DeviceResources.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.xaml.h" />
+    <ClInclude Include="App1Main.h" />
+    <ClInclude Include="DirectXPage.xaml.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Common\StepTimer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\DirectXHelper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\DeviceResources.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\steering_arrow.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\throttle_arrow.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\transport.play.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\back.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\background.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\cancel.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\folder.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\edit.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\save.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\sr_16x16.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_24x24.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_30x30.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_32x32.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_33x33.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_42x42.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_48x48.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_50x50.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_54x54.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_56x56.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_70x70.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_90x90.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_98x98.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_120x120.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_150x150.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_210x210.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_248x120.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_248x248.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_256x256.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_310x150.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_310x310.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_434x210.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_434x434.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_620x300.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_868x420.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_1116x540.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\Logo.scale-180.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\Logo.scale-80.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\Logo.scale-100.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\Logo.scale-140.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.scale-80.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.scale-100.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.scale-140.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.scale-180.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.targetsize-16.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.targetsize-32.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.targetsize-48.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.targetsize-256.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-100.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-140.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-180.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_43x43.scale-100.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_43x43.scale-140.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_43x43.scale-180.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_126x126.scale-80.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_126x126.scale-100.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_126x126.scale-140.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_126x126.scale-180.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_270x270.scale-80.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_270x270.scale-100.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_270x270.scale-140.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_270x270.scale-180.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_558x270.scale-80.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_558x270.scale-100.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_558x270.scale-140.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_558x270.scale-180.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_558x558.scale-80.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_558x558.scale-100.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_558x558.scale-140.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\sr_558x558.scale-180.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-100.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-140.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-180.png">
+      <Filter>Assets\Logo</Filter>
+    </Image>
+    <Image Include="Assets\add.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\feature.search.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\sync.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App1_TemporaryKey.pfx" />
+    <None Include="Package.StoreAssociation.xml" />
+    <None Include="SmartRacerWinRT_StoreKey.pfx" />
+    <None Include="SmartRacer.WinRT_TemporaryKey.pfx" />
+    <None Include="SmartRacer.WinRT_StoreKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="DirectXPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{fa5e4b2d-7f32-4304-8a87-847612cbb947}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Logo">
+      <UniqueIdentifier>{fbb95abc-3203-4fd9-8e3b-1b48755f3ec0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{41daba41-b653-443f-9bb8-1c1ef9b43d25}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Common\StandardStyles.xaml">
+      <Filter>Common</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>
