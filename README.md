@@ -85,10 +85,10 @@ Then the PCB is available, the components can be soldered onto it, but before so
 The control board main part is a cc2541 module by Texas Instruments. This module provides 8051 CPU and Bluetooth radio in one package. The firmware has to be developed using IAR tool that is available as trial version, which is capable of building small firmware images or works for a limited time. Also TI BLE-stack is needed.
 
 The main part of firmware is its Bluetooth Smart GATT table that defines device services and characteristics. So this firmware has one service for controlling a car and this service has several characteristics/attributes:
-* Steering attribute – the value from 0 to 500, there 375 is centre, 0 is a left turn and 500 is a right turn (and values in the between could be used for precise control).
-* Throttle attribute – the value from 0 to 500, there 375 is keeps motor off, 0 lets it run backward at full speed and 500 lets it run forward at its full speed (the intermediate values could be used for controlling motor speed, make it run a little bit slower or faster).
+* 0xacc2 - Steering attribute – the value from 0 to 700, there 350 is centre, 0 is a left turn and 700 is a right turn (and values in the between could be used for precise control).
+* 0xacc1 - Throttle attribute – the value from 0 to 700, there 350 is keeps motor off, 0 lets it run backward at full speed and 700 lets it run forward at its full speed (the intermediate values could be used for controlling motor speed, make it run a little bit slower or faster).
+* 0xa101 - Lights attribute – depending on written values, the Bluetooth module turns on/off the specified lights. (16-bit number for controlling each individual light. 0x0001 – first light on, 0x0002 -  second light on, 0x0004 third light on, 0x0008 – fourth light on, 0x0010 – fifth light on.)
 * Battery voltage attribute – allows monitoring cars battery voltage and to determine if the battery is not running low.
-* Lights attribute – depending on written values, the Bluetooth module turns on/off the specified lights.
 
 Then the service and its attributes are defined, it’s only left to finish firmware – add code for reacting to attribute changes and adjust motors, steering or lights.
 
