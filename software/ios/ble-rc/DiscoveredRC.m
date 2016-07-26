@@ -5,46 +5,46 @@
 @synthesize deviceName;
 @synthesize deviceAddress;
 @synthesize device;
+@synthesize connectable;
+@synthesize comment;
 
 -(id)initWithData:(CBPeripheral*)peripheral;
 {
-    self = [super init];
-    
-    if (self)
-    {
-        self.device = peripheral;
-        self.deviceName = self.device.name;
-        
-        
-        if ([self.deviceName isEqual:@""])
-        {
-            self.deviceName = @"Buggy";
-        }
-        else if (self.deviceName == nil)
-        {
-            self.deviceName = @"Buggy";
-        }
-        
-        //if (nil != self.device.identifier)
-        //{
-        //    self.deviceAddress = [NSString stringWithFormat:@"%@", device.identifier.UUIDString];
-        //}
-    }
-    
-    return self;
-}
+	self = [super init];
 
--(id)initWithFakeData:(NSString*)name
+	if (self)
+	{
+		self.device = peripheral;
+		self.deviceName = self.device.name;
+		self.deviceAddress = peripheral.identifier;
+		
+		if (self.deviceName == nil)
+		{
+			self.deviceName = @"Buggy";
+		}
+		else if ([self.deviceName isEqual:@""])
+		{
+			self.deviceName = @"Buggy";
+		}
+
+		self.connectable = true;
+	}
+    
+	return self;
+};
+
+-(id)initWithFakeData:(NSString*)name :(bool)canConnect
 {
-    self = [super init];
+	self = [super init];
+
+	if (self)
+	{
+		self.device = NULL;
+		self.deviceName = name;
+		self.connectable = canConnect;
+	}
     
-    if (self)
-    {
-        self.device = NULL;
-        self.deviceName = name;
-    }
-    
-    return self;
-}
+	return self;
+};
 
 @end
