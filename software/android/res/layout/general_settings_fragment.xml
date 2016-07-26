@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <TextView
+        android:id="@+id/textViewRadioDeviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/car_name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editTextRadioDeviceName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/car_name_hint"
+        android:inputType="textPostalAddress" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textViewPulseWidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pulse_width"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <SeekBar
+        android:id="@+id/seekBarPulseWidth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/checkBoxInvertSteering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/invert_steering" />
+
+    <CheckBox
+        android:id="@+id/checkBoxInvertThrottle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/invert_throttle" />
+
+    <CheckBox
+        android:id="@+id/checkBoxUseAccelerometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/use_accelerometer" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupAccelerometerDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/radioUseX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/use_accelerometer_x" />
+
+        <RadioButton
+            android:id="@+id/radioUseY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/use_accelerometer_y" />
+
+        <RadioButton
+            android:id="@+id/radioUseZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/use_accelerometer_z" />
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File created by the Android Action Bar Style Generator
+
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <style name="Theme.Smart_racer" parent="@android:style/Theme.Holo">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_smart_racer</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Smart_racer</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Smart_racer</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Smart_racer</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Smart_racer</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Smart_racer</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_smart_racer</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_smart_racer</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Smart_racer</item>
+        
+        
+            <item name="android:editTextBackground">@drawable/smart_racer_edit_text_holo_light</item>
+
+
+    <item name="android:listChoiceIndicatorSingle">@drawable/apptheme_btn_radio_holo_light</item>
+
+
+    <item name="android:textColorHighlight">#9970b347</item>
+    <item name="android:textSelectHandleLeft">@drawable/smart_racer_text_select_handle_left</item>
+    <item name="android:textSelectHandleRight">@drawable/smart_racer_text_select_handle_right</item>
+    <item name="android:textSelectHandle">@drawable/smart_racer_text_select_handle_middle</item>
+
+    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewSmart_racer</item>
+
+    <item name="android:listChoiceIndicatorMultiple">@drawable/smart_racer_btn_check_holo_light</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarSmart_racer</item>
+
+    <item name="android:fastScrollThumbDrawable">@drawable/smart_racer_fastscroll_thumb_holo</item>
+        
+        
+    </style>
+
+    <style name="ActionBar.Solid.Smart_racer" parent="@android:style/Widget.Holo.ActionBar.Solid">
+        <item name="android:background">@drawable/ab_background_textured_smart_racer</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_smart_racer</item>
+        <item name="android:backgroundSplit">@drawable/ab_background_textured_smart_racer</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Smart_racer</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Smart_racer" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_smart_racer</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Smart_racer</item>
+    </style>
+
+    <style name="PopupMenu.Smart_racer" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_smart_racer</item>	
+    </style>
+
+    <style name="DropDownListView.Smart_racer" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_smart_racer</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Smart_racer" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_smart_racer</item>
+    </style>
+
+    <style name="DropDownNav.Smart_racer" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_smart_racer</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_smart_racer</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_smart_racer</item>
+    </style>
+    
+    <style name="ProgressBar.Smart_racer" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_smart_racer</item>
+    </style>
+    
+    <style name="ActionButton.CloseMode.Smart_racer" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_smart_racer</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Smart_racer.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Smart_racer</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Smart_racer</item>
+    </style>
+
+
+  <style name="AutoCompleteTextViewSmart_racer" parent="android:Widget.Holo.Light.AutoCompleteTextView">
+      <item name="android:dropDownSelector">@drawable/smart_racer_list_selector_holo_light</item>
+	    <item name="android:background">@drawable/smart_racer_edit_text_holo_light</item>
+  </style>
+
+  <style name="SeekBarSmart_racer" parent="android:Widget.Holo.Light.SeekBar">
+      <item name="android:progressDrawable">@drawable/smart_racer_scrubber_progress_horizontal_holo_light</item>
+      <item name="android:indeterminateDrawable">@drawable/smart_racer_scrubber_progress_horizontal_holo_light</item>
+      <item name="android:thumb">@drawable/smart_racer_scrubber_control_selector_holo_light</item>
+  </style>
+
+
+
+
+
+
+
+
+
+
+    <style name="nameStyle">
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+
+    <style name="logStyle">
+        <item name="android:background">#dde</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="dataStyle">
+        <item name="android:background">#fff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#030</item>
+        <item name="android:textColorHint">#fff</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="dataStyle1">
+        <item name="android:textColor">#060</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="dirStyle">
+        <item name="android:textColor">#003</item>
+				<item name="android:textSize">20sp</item>
+				<item name="android:layout_margin">10dp</item>
+				<item name="android:gravity">center_horizontal</item>
+    </style>
+
+
+    <style name="devlistStyle">
+        <item name="android:dividerHeight">5dp</item>
+    </style>
+
+    <style name="nameStyleSelected">
+        <item name="android:textColor">#c33</item>
+    </style>
+
+
+    <style name="listItemStyle">
+        <item name="android:background">#abc</item>
+        <item name="android:padding">18dp</item>
+    </style>
+
+
+    <style name="dataStyle2">
+        <item name="android:textColor">#f33</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

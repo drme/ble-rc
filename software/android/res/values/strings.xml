@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="smart_racer_name">SmartRacer</string>
+    <string name="ble_zee_name">BleZee</string>
+    <string name="steering_hint">Adjust the [centre] value till the wheels are centred straight.\nAdjust the [left] value till the wheels are fully rotated to the left.\nAdjust the [right] value till the wheels are fully rotated to the right.</string>
+    <string name="steering_hint_simple">Adjust the [left] value till the wheels are fully rotated to the left.\nAdjust the [right] value till the wheels are fully rotated to the right.</string>
+    <string name="steering_center">Steering centre</string>
+    <string name="steering_left">Max left turn</string>
+    <string name="steering_right">Max right turn</string>
+    <string name="steering_symetric">Symmetrical steering</string>
+    <string name="throttle_hint">Adjust the [idle] value till the car is not moving.\nAdjust the [reverse] value till the car goes at max backward speed.\nAdjust the [forward] value till the car goes at the max forward speed.</string>
+    <string name="throttle_hint_simple_mini_z">Adjust the [reverse] value till the car goes at max backward speed.\nAdjust the [forward] value till the car goes at the max forward speed.</string>
+    <string name="throttle_idle">Throttle idle</string>
+    <string name="throttle_reverse">Throttle max reverse speed</string>
+    <string name="throttle_forward">Throttle max forward speed</string>
+    <string name="car_name">Car name</string>
+    <string name="car_name_hint">Enter car name</string>
+    <string name="pulse_width">Duty Cycle</string>
+    <string name="use_accelerometer">Use accelerometer for steering:</string>
+    <string name="use_accelerometer_x">use X axis</string>
+    <string name="use_accelerometer_y">use Y axis</string>
+    <string name="use_accelerometer_z">use Z axis</string>
+    <string name="invert_steering">Invert steering</string>
+    <string name="invert_throttle">Invert throttle</string>
+    <string name="main_light">Main lights</string>
+    <string name="left_light">Left turn</string>
+    <string name="right_light">Right turn</string>
+    <string name="emergency_light">Emergency light</string>
+    <string name="connection_status">Connection status</string>
+    <string name="battery_status">Battery status</string>
+    <string name="battery_voltage">Voltage</string>
+    <string name="battery_capacity">Capacity</string>
+    <string name="menu_connect">Connect</string>
+    <string name="menu_disconnect">Disconnect</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_scan">Scan</string>
+    <string name="menu_stop">Stop</string>
+    <string name="menu_hardware">Hardware info</string>
+    <string name="refresh"></string>
+    <string name="general">General</string>
+    <string name="steering">Steering</string>
+    <string name="throttle">Throttle</string>
+    <string name="battery">Battery</string>
+    <string name="smart_racer_title_activity_main">Smart Racer</string>
+    <string name="ble_zee_title_activity_main">Ble Zee</string>
+    <string name="title_activity_car_settings">Settings</string>
+    <string name="title_devices">Available cars</string>
+    <string name="ble_not_supported">Bluetooth 4.0 LE is not supported on your device.</string>
+    <string name="error_bluetooth_not_supported">Bluetooth Low Energy is not supported on your device.</string>
+    <string name="unknown_device">Unknown device</string>
+    <string name="update_firmware">Update firmware</string>
+    <string name="update">Update</string>
+    <string name="select_firmware">Select firmware</string>
+    <string name="hardware_version">Hardware version:</string>
+    <string name="firmware_version">Firmware version:</string>
+    <string name="new_firmware_version">New firmware:</string>
+    <string name="get_cars">Get some cars</string>
+    <string name="add_fakes">Add demo cars</string>
+    <string name="remove_fakes">Remove demo cars</string>
+    <string name="cancel">Cancel update</string>
+
+</resources>

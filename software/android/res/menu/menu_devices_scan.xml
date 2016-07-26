@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_refresh"
+        android:checkable="false"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom"
+        android:title="@string/refresh"/>
+    <item
+        android:id="@+id/menu_scan"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/menu_scan"/>
+    <item
+        android:id="@+id/menu_stop"
+        android:orderInCategory="101"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/menu_stop"/>
+    
+    
+    <item
+        android:id="@+id/menu_get_cars"
+        android:showAsAction="never"
+        android:title="@string/get_cars"/>
+    
+    <item
+        android:id="@+id/menu_add_fakes"
+        android:showAsAction="never"
+        android:title="@string/add_fakes"/>
+    
+        <item
+        android:id="@+id/menu_remove_fakes"
+        android:showAsAction="never"
+        android:title="@string/remove_fakes"/>
+    
+    
+    
+</menu>

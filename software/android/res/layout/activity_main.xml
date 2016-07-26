@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text=""
+        android:visibility="invisible" />
+
+    <eu.sarunas.apps.android.racecar.ThumbStickView
+        android:id="@+id/thumbStickViewSteering"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="40"
+        android:rotation="90" />
+
+    <eu.sarunas.apps.android.racecar.ThumbStickView
+        android:id="@+id/thumbStickViewThrottle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="55"
+        android:rotation="90" />
+
+</LinearLayout>
