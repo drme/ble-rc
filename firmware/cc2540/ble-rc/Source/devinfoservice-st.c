@@ -38,6 +38,8 @@ static uint8 devInfoPnpIdProps = GATT_PROP_READ;
 
 #if PROJECT_TYPE == SIMPLE
 	static const uint8 devInfoHardwareRev[]  = "Simple";
+#elif PROJECT_TYPE == ESCSERVO
+	static const uint8 devInfoHardwareRev[]  = "Simple"1111;
 #else
 	#error "undefined type"
 #endif
