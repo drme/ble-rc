@@ -23,7 +23,6 @@ uint8* defaultName = "Radio Controlled Car\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
 uint8 deviceType = 0x04;
 bool keepRunninOnNoCommands = false;
 static bool ticking = false;
-
 static uint16 mainTaskId = 0;
 
 void CarSetDefaultValues()
@@ -182,6 +181,14 @@ void CarUpdateStatus()
 };
 
 void CarPPMTick()
+{
+};
+
+void FinishAccelerometerUpdate()
+{
+};
+
+void TempFinishUpdate()
 {
 };
 

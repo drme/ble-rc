@@ -3,12 +3,14 @@
 
 #include "hal_types.h"
 
-#define START_DEVICE_EVENT      0x0001
-#define PERIODIC_EVENT          0x0002
-#define UPDATE_STATUS_EVENT     0x0004
-#define NO_COMMAND_EVENT        0x0010
-#define PPM_EVENT               0x0020
-#define CONNECTION_UPDATE_EVENT 0x0040
+#define START_DEVICE_EVENT         0x0001
+#define PERIODIC_EVENT             0x0002
+#define UPDATE_STATUS_EVENT        0x0004
+#define ACCELEROMETER_SENSOR_EVENT 0x0008
+#define NO_COMMAND_EVENT           0x0010
+#define PPM_EVENT                  0x0020
+#define CONNECTION_UPDATE_EVENT    0x0040
+#define TEMPERATURE_READING_EVENT  0x0200
 
 #ifdef __cplusplus
 extern "C"
@@ -34,6 +36,8 @@ extern void CarInitLights();
 extern void CarSetLights(uint16 value);
 extern void CarSetLight(uint16 lightId, uint8 state);
 extern void CarPPMTick();
+extern void FinishAccelerometerUpdate();
+extern void TempFinishUpdate();
 
 #define DECLARE_BATTERY_CONNECT(selectPinCode, selectOutputCode, pin, onState) \
 \

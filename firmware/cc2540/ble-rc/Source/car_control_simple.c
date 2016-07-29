@@ -1,4 +1,4 @@
-#if defined(FIRMWARE_TYPE_ESCSERVO)
+#if defined(FIRMWARE_TYPE_SIMPLE)
 
 #include "car_control.h"
 #include "OSAL.h"
@@ -216,6 +216,14 @@ void CarTick()
 };
 
 void CarPPMTick()
+{
+};
+
+void FinishAccelerometerUpdate()
+{
+};
+
+void TempFinishUpdate()
 {
 };
 

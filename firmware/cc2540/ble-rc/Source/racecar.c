@@ -306,6 +306,20 @@ uint16 RaceCarProcessEvent(uint8 taskId, uint16 events)
 
 		return (events ^ CONNECTION_UPDATE_EVENT);
 	}
+	
+	if (events & TEMPERATURE_READING_EVENT)
+	{
+		TempFinishUpdate();
+
+		return (events ^ TEMPERATURE_READING_EVENT);
+	}
+
+	if (events & ACCELEROMETER_SENSOR_EVENT)
+	{
+		FinishAccelerometerUpdate();
+
+		return (events ^ ACCELEROMETER_SENSOR_EVENT);
+	}
 
 	return 0;
 };

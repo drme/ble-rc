@@ -37,9 +37,11 @@ static uint8 devInfo11073CertProps = GATT_PROP_READ;
 static uint8 devInfoPnpIdProps = GATT_PROP_READ;
 
 #if defined (FIRMWARE_TYPE_SIMPLE)
-	static const uint8 devInfoHardwareRev[]  = "Simple";55
+	static const uint8 devInfoHardwareRev[]  = "Simple";
 #elif defined (FIRMWARE_TYPE_ESCSERVO)
 	static const uint8 devInfoHardwareRev[]  = "EscServo";
+#elif defined (FIRMWARE_TYPE_ESCSERVO2)
+	static const uint8 devInfoHardwareRev[]  = "EscServo2";
 #else
 	#error "undefined type"55
 #endif
