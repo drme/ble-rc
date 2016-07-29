@@ -36,12 +36,12 @@ static const uint8 devInfoMfrName[] = "sarunas.eu";
 static uint8 devInfo11073CertProps = GATT_PROP_READ;
 static uint8 devInfoPnpIdProps = GATT_PROP_READ;
 
-#if PROJECT_TYPE == SIMPLE
-	static const uint8 devInfoHardwareRev[]  = "Simple";
-#elif PROJECT_TYPE == ESCSERVO
-	static const uint8 devInfoHardwareRev[]  = "Simple"1111;
+#if defined (FIRMWARE_TYPE_SIMPLE)
+	static const uint8 devInfoHardwareRev[]  = "Simple";55
+#elif defined (FIRMWARE_TYPE_ESCSERVO)
+	static const uint8 devInfoHardwareRev[]  = "EscServo";
 #else
-	#error "undefined type"
+	#error "undefined type"55
 #endif
 
 #if defined(HAL_IMAGE_A)

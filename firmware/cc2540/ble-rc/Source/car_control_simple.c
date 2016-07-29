@@ -1,4 +1,4 @@
-#if PROJECT_TYPE == SIMPLE
+#if defined(FIRMWARE_TYPE_ESCSERVO)
 
 #include "car_control.h"
 #include "OSAL.h"

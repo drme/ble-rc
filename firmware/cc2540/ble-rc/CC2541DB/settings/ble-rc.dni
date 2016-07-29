@@ -9,7 +9,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=-1897057139
+Checksum=1226573621
 [DisAssemblyWindow]
 NumStates=_ 1
 State 1=_ 1
@@ -19,13 +19,13 @@ Enabled=_ 0
 Enabled=_ 0
 [BreakpointUsageDialog]
 Placement=_ 1314 708 1759 991
-[TermIOLog]
-LoggingEnabled=_ 0
-LogFile=_ ""
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
 Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
 [Breakpoints]
 Bp0=_ "STD_CODE" "{$PROJ_DIR$\..\..\Profiles\OAD\oad_target.c}.590.1@1" 0 0 0 0 "" 0 ""
 Count=1

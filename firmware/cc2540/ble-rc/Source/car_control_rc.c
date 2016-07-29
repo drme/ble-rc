@@ -1,4 +1,4 @@
-#if PROJECT_TYPE == ESCSERVO
+#if defined(FIRMWARE_TYPE_ESCSERVO)
 
 #include "car_control.h"
 #include "OSAL.h"
@@ -9,19 +9,20 @@
 #include "gatt.h"
 #include "gapgattserver.h"
 #include "blercprofile.h"
+#include "hal_ina226.h"
 
-#define PWM_PERIODIC_EVT_PERIOD		20
-#define STEERING_CHANNEL_L		T1CC4L
-#define STEERING_CHANNEL_H		T1CC4H
-#define THROTTLE_CHANNEL_L		T1CC3L
-#define THROTTLE_CHANNEL_H		T1CC3H
-#define CONNECTED_LED_PIN		P0_2
+#define PWM_PERIODIC_EVT_PERIOD 20
+#define STEERING_CHANNEL_L      T1CC4L
+#define STEERING_CHANNEL_H      T1CC4H
+#define THROTTLE_CHANNEL_L      T1CC3L
+#define THROTTLE_CHANNEL_H      T1CC3H
 
 DECLARE_BATTERY_CONNECT(P0DIR |= (1 << 5), P0SEL &= ~(1 << 5), P0_5, 1);
-DECLARE_LIGHTS(P2DIR |= (1 << 2) | (1 << 1); P1DIR |= (1 << 6) | (1 << 5) | (1 << 4), P2SEL &= ~((1 << 2) | (1 << 1)); P1SEL &= ~((1 << 6) | (1 << 5) | (1 << 4)), P2_2, P2_1, P1_6, P1_5, P1_4, FALSE);
+DECLARE_LIGHTS(P2DIR |= 0x07; P1DIR |= (1 << 6); P0DIR |= (1 << 5), P2SEL &= ~(0x7); P1SEL &= ~(1 << 6); P0SEL &= ~(1 << 5), P2_2, P2_1, P1_6, P2_0, P0_5, FALSE);
 uint8* defaultName = "Radio Controlled Car\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0";
 uint8 deviceType = 0x04;
 bool keepRunninOnNoCommands = false;
+static bool ticking = false;
 
 static uint16 mainTaskId = 0;
 
@@ -110,7 +111,7 @@ void CarInit(uint8 taskId)
 	P2DIR = 0x00;
 	P2    = 0x00;
 	
-	//HalIna226Init(15.0f, 0.01f);
+	HalIna226Init(15.0f, 0.01f);
 	
 	InitPWMTimers();
 	CarReset();
@@ -119,25 +120,29 @@ void CarInit(uint8 taskId)
 void CarSetSteering(uint16 value)
 {
 	control.steering = value;
+	ticking = true;
 };
 
 void CarSetThrottle(uint16 value)
 {
 	control.throttle = value;
+	ticking = true;
 };
 
 void CarConnected()
 {
 	CarReset();
 	CarTick();
-	//PowerOnIna226();
+	PowerOnIna226();
+	ticking = false;
 };
 
 void CarDisConnected()
 {
 	CarReset();
 	CarTick();
-	//PowerOffIna226();
+	PowerOffIna226();
+	ticking = false;
 };
 
 void CarTick()
@@ -163,14 +168,17 @@ void CarTick()
 	// Reset timer
 	T1CNTL = 0;
 
-	// Start timer in modulo mode.
-	T1CTL |= 0x02;
+	if (true == ticking)
+	{
+		// Start timer in modulo mode.
+		T1CTL |= 0x02;
+	}
 };
 
 void CarUpdateStatus()
 {
-	//HalIna226UpdateVoltage(&stats.batteryVoltage);
-	//HalIna226UpdateCurrent(&stats.batteryCurrent);
+	HalIna226UpdateVoltage(&stats.batteryVoltage);
+	HalIna226UpdateCurrent(&stats.batteryCurrent);
 };
 
 void CarPPMTick()

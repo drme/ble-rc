@@ -15149,7 +15149,7 @@
           <state>POWER_SAVING</state>
           <state>HAL_I2C=TRUE</state>
           <state>HAL_I2C_MASTER=TRUE</state>
-          <state>PROJECT_TYPE=ESCSERVO</state>
+          <state>FIRMWARE_TYPE_ESCSERVO</state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -16211,7 +16211,7 @@
           <state>POWER_SAVING</state>
           <state>HAL_I2C=TRUE</state>
           <state>HAL_I2C_MASTER=TRUE</state>
-          <state>PROJECT_TYPE=ESCSERVO</state>
+          <state>FIRMWARE_TYPE_ESCSERVO</state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -17275,7 +17275,7 @@
           <state>POWER_SAVING</state>
           <state>HAL_I2C=TRUE</state>
           <state>HAL_I2C_MASTER=TRUE</state>
-          <state>PROJECT_TYPE=ESCSERVO</state>
+          <state>FIRMWARE_TYPE_ESCSERVO</state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -18066,6 +18066,58 @@
   </configuration>
   <group>
     <name>APP</name>
+    <group>
+      <name>Base</name>
+      <file>
+        <name>$PROJ_DIR$\..\Source\blercprofile.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Source\blercprofile.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Source\racecar.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Source\racecar.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Source\startup.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Source\startup_osal.c</name>
+      </file>
+    </group>
+    <group>
+      <name>Drivers</name>
+      <file>
+        <name>$PROJ_DIR$\..\Source\hal_ina226.c</name>
+        <excluded>
+          <configuration>Simple-OAD-ImgA</configuration>
+          <configuration>Simple-OAD-ImgB</configuration>
+          <configuration>Simple</configuration>
+        </excluded>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Source\hal_ina226.h</name>
+        <excluded>
+          <configuration>Simple-OAD-ImgA</configuration>
+          <configuration>Simple-OAD-ImgB</configuration>
+          <configuration>Simple</configuration>
+        </excluded>
+      </file>
+    </group>
+    <group>
+      <name>Utils</name>
+      <file>
+        <name>$PROJ_DIR$\..\Source\devinfoservice-st.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Source\dl_util.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Source\dl_util.h</name>
+      </file>
+    </group>
     <file>
       <name>$PROJ_DIR$\..\Source\accelerometerservice.c</name>
       <excluded>
@@ -18087,12 +18139,6 @@
         <configuration>EscServo-OAD-ImgA</configuration>
         <configuration>EscServo-OAD-ImgB</configuration>
       </excluded>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Source\blercprofile.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Source\blercprofile.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\Source\car_control.h</name>
@@ -18203,15 +18249,6 @@
       </excluded>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\Source\devinfoservice-st.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Source\dl_util.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Source\dl_util.h</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\Source\hal_acc.c</name>
       <excluded>
         <configuration>Simple-OAD-ImgA</configuration>
@@ -18289,28 +18326,6 @@
       </excluded>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\Source\hal_ina226.c</name>
-      <excluded>
-        <configuration>Simple-OAD-ImgA</configuration>
-        <configuration>Simple-OAD-ImgB</configuration>
-        <configuration>Simple</configuration>
-        <configuration>EscServo</configuration>
-        <configuration>EscServo-OAD-ImgA</configuration>
-        <configuration>EscServo-OAD-ImgB</configuration>
-      </excluded>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Source\hal_ina226.h</name>
-      <excluded>
-        <configuration>Simple-OAD-ImgA</configuration>
-        <configuration>Simple-OAD-ImgB</configuration>
-        <configuration>Simple</configuration>
-        <configuration>EscServo</configuration>
-        <configuration>EscServo-OAD-ImgA</configuration>
-        <configuration>EscServo-OAD-ImgB</configuration>
-      </excluded>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\Source\hal_temp.h</name>
       <excluded>
         <configuration>Simple-OAD-ImgA</configuration>
@@ -18331,18 +18346,6 @@
         <configuration>EscServo-OAD-ImgA</configuration>
         <configuration>EscServo-OAD-ImgB</configuration>
       </excluded>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Source\racecar.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Source\racecar.h</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Source\startup.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Source\startup_osal.c</name>
     </file>
   </group>
   <group>
