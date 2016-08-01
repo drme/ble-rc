@@ -9,27 +9,75 @@
       <name>All</name>
       <member>
         <project>ble-rc</project>
+        <configuration>dNano</configuration>
+      </member>
+      <member>
+        <project>ble-rc</project>
+        <configuration>dNano-OAD-ImgA</configuration>
+      </member>
+      <member>
+        <project>ble-rc</project>
+        <configuration>dNano-OAD-ImgB</configuration>
+      </member>
+      <member>
+        <project>ble-rc</project>
         <configuration>MiniZ</configuration>
       </member>
       <member>
         <project>ble-rc</project>
-        <configuration>CC2541DK-MINI Keyfob</configuration>
+        <configuration>MiniZ-OAD-ImgA</configuration>
       </member>
       <member>
         <project>ble-rc</project>
-        <configuration>CC2541-OAD-ImgA</configuration>
+        <configuration>MiniZ-OAD-ImgB</configuration>
       </member>
       <member>
         <project>ble-rc</project>
-        <configuration>CC2541-OAD-ImgB</configuration>
+        <configuration>MiniZ-BLDC</configuration>
       </member>
       <member>
         <project>ble-rc</project>
-        <configuration>CC2541-OAD-Encrypted-ImgA</configuration>
+        <configuration>MiniZ-BLDC-ImgA</configuration>
       </member>
       <member>
         <project>ble-rc</project>
-        <configuration>CC2541-OAD-Encrypted-ImgB</configuration>
+        <configuration>MiniZ-BLDC-ImgB</configuration>
+      </member>
+      <member>
+        <project>ble-rc</project>
+        <configuration>Simple</configuration>
+      </member>
+      <member>
+        <project>ble-rc</project>
+        <configuration>Simple-OAD-ImgA</configuration>
+      </member>
+      <member>
+        <project>ble-rc</project>
+        <configuration>Simple-OAD-ImgB</configuration>
+      </member>
+      <member>
+        <project>ble-rc</project>
+        <configuration>EscServo</configuration>
+      </member>
+      <member>
+        <project>ble-rc</project>
+        <configuration>EscServo-OAD-ImgA</configuration>
+      </member>
+      <member>
+        <project>ble-rc</project>
+        <configuration>EscServo-OAD-ImgB</configuration>
+      </member>
+      <member>
+        <project>ble-rc</project>
+        <configuration>EscServoLarge</configuration>
+      </member>
+      <member>
+        <project>ble-rc</project>
+        <configuration>EscServoLarge-OAD-ImgA</configuration>
+      </member>
+      <member>
+        <project>ble-rc</project>
+        <configuration>EscServoLarge-OAD-ImgB</configuration>
       </member>
     </batchDefinition>
   </batchBuild>

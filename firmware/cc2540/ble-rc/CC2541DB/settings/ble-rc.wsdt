@@ -3,7 +3,7 @@
 <Workspace>
   <ConfigDictionary>
     
-  <CurrentConfigs><Project>ble-rc/MiniZ-OAD-ImgB</Project></CurrentConfigs></ConfigDictionary>
+  <CurrentConfigs><Project>ble-rc/MiniZ-BLDC</Project></CurrentConfigs></ConfigDictionary>
   <Desktop>
     <Static>
       <Workspace>
