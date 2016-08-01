@@ -5099,7 +5099,7 @@
     </debuggerPlugins>
   </configuration>
   <configuration>
-    <name>Mini-Z-BLDC</name>
+    <name>MiniZ-BLDC</name>
     <toolchain>
       <name>8051</name>
     </toolchain>

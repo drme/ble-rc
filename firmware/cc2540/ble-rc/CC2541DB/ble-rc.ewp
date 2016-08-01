@@ -9563,7 +9563,7 @@
     </settings>
   </configuration>
   <configuration>
-    <name>Mini-Z-BLDC</name>
+    <name>MiniZ-BLDC</name>
     <toolchain>
       <name>8051</name>
     </toolchain>
@@ -9686,15 +9686,15 @@
         </option>
         <option>
           <name>ExePath</name>
-          <state>Mini-Z-BLDC\Exe</state>
+          <state>MiniZ-BLDC\Exe</state>
         </option>
         <option>
           <name>ObjPath</name>
-          <state>Mini-Z-BLDC\Obj</state>
+          <state>MiniZ-BLDC\Obj</state>
         </option>
         <option>
           <name>ListPath</name>
-          <state>Mini-Z-BLDC\List</state>
+          <state>MiniZ-BLDC\List</state>
         </option>
         <option>
           <name>GOutputBinary</name>
@@ -9830,11 +9830,8 @@
           <state>OSAL_CBTIMER_NUM_TASKS=1</state>
           <state>HAL_AES_DMA=TRUE</state>
           <state>HAL_DMA=TRUE</state>
-          <state>HAL_I2C=TRUE</state>
-          <state>HAL_I2C_MASTER=TRUE</state>
-          <state>xPOWER_SAVING</state>
-          <state>MINI_Z_BLDC</state>
-          <state>RC_TYPE=1</state>
+          <state>POWER_SAVING</state>
+          <state>FIRMWARE_TYPE_MINIZBLDC</state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -10894,10 +10891,7 @@
           <state>HAL_AES_DMA=TRUE</state>
           <state>HAL_DMA=TRUE</state>
           <state>POWER_SAVING</state>
-          <state>HAL_I2C=TRUE</state>
-          <state>HAL_I2C_MASTER=TRUE</state>
-          <state>MINI_Z_BLDC</state>
-          <state>RC_TYPE=1</state>
+          <state>FIRMWARE_TYPE_MINIZBLDC</state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -11958,10 +11952,7 @@
           <state>HAL_AES_DMA=TRUE</state>
           <state>HAL_DMA=TRUE</state>
           <state>POWER_SAVING</state>
-          <state>HAL_I2C=TRUE</state>
-          <state>HAL_I2C_MASTER=TRUE</state>
-          <state>MINI_Z_BLDC</state>
-          <state>RC_TYPE=1</state>
+          <state>FIRMWARE_TYPE_MINIZBLDC</state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -22331,6 +22322,9 @@
           <configuration>dNano</configuration>
           <configuration>dNano-OAD-ImgA</configuration>
           <configuration>dNano-OAD-ImgB</configuration>
+          <configuration>MiniZ-BLDC</configuration>
+          <configuration>MiniZ-BLDC-ImgA</configuration>
+          <configuration>MiniZ-BLDC-ImgB</configuration>
           <configuration>Simple</configuration>
           <configuration>Simple-OAD-ImgA</configuration>
           <configuration>Simple-OAD-ImgB</configuration>
@@ -22347,6 +22341,9 @@
           <configuration>dNano</configuration>
           <configuration>dNano-OAD-ImgA</configuration>
           <configuration>dNano-OAD-ImgB</configuration>
+          <configuration>MiniZ-BLDC</configuration>
+          <configuration>MiniZ-BLDC-ImgA</configuration>
+          <configuration>MiniZ-BLDC-ImgB</configuration>
           <configuration>Simple</configuration>
           <configuration>Simple-OAD-ImgA</configuration>
           <configuration>Simple-OAD-ImgB</configuration>
@@ -22363,6 +22360,9 @@
           <configuration>dNano</configuration>
           <configuration>dNano-OAD-ImgA</configuration>
           <configuration>dNano-OAD-ImgB</configuration>
+          <configuration>MiniZ-BLDC</configuration>
+          <configuration>MiniZ-BLDC-ImgA</configuration>
+          <configuration>MiniZ-BLDC-ImgB</configuration>
           <configuration>Simple</configuration>
           <configuration>Simple-OAD-ImgA</configuration>
           <configuration>Simple-OAD-ImgB</configuration>
@@ -22379,6 +22379,9 @@
           <configuration>dNano</configuration>
           <configuration>dNano-OAD-ImgA</configuration>
           <configuration>dNano-OAD-ImgB</configuration>
+          <configuration>MiniZ-BLDC</configuration>
+          <configuration>MiniZ-BLDC-ImgA</configuration>
+          <configuration>MiniZ-BLDC-ImgB</configuration>
           <configuration>Simple</configuration>
           <configuration>Simple-OAD-ImgA</configuration>
           <configuration>Simple-OAD-ImgB</configuration>
@@ -22395,6 +22398,9 @@
           <configuration>dNano</configuration>
           <configuration>dNano-OAD-ImgA</configuration>
           <configuration>dNano-OAD-ImgB</configuration>
+          <configuration>MiniZ-BLDC</configuration>
+          <configuration>MiniZ-BLDC-ImgA</configuration>
+          <configuration>MiniZ-BLDC-ImgB</configuration>
           <configuration>Simple</configuration>
           <configuration>Simple-OAD-ImgA</configuration>
           <configuration>Simple-OAD-ImgB</configuration>
@@ -22411,6 +22417,9 @@
           <configuration>dNano</configuration>
           <configuration>dNano-OAD-ImgA</configuration>
           <configuration>dNano-OAD-ImgB</configuration>
+          <configuration>MiniZ-BLDC</configuration>
+          <configuration>MiniZ-BLDC-ImgA</configuration>
+          <configuration>MiniZ-BLDC-ImgB</configuration>
           <configuration>Simple</configuration>
           <configuration>Simple-OAD-ImgA</configuration>
           <configuration>Simple-OAD-ImgB</configuration>
@@ -22423,6 +22432,9 @@
           <configuration>dNano</configuration>
           <configuration>dNano-OAD-ImgA</configuration>
           <configuration>dNano-OAD-ImgB</configuration>
+          <configuration>MiniZ-BLDC</configuration>
+          <configuration>MiniZ-BLDC-ImgA</configuration>
+          <configuration>MiniZ-BLDC-ImgB</configuration>
           <configuration>Simple</configuration>
           <configuration>Simple-OAD-ImgA</configuration>
           <configuration>Simple-OAD-ImgB</configuration>
@@ -22438,6 +22450,9 @@
           <configuration>dNano</configuration>
           <configuration>dNano-OAD-ImgA</configuration>
           <configuration>dNano-OAD-ImgB</configuration>
+          <configuration>MiniZ-BLDC</configuration>
+          <configuration>MiniZ-BLDC-ImgA</configuration>
+          <configuration>MiniZ-BLDC-ImgB</configuration>
           <configuration>Simple</configuration>
           <configuration>Simple-OAD-ImgA</configuration>
           <configuration>Simple-OAD-ImgB</configuration>
@@ -22454,6 +22469,9 @@
           <configuration>dNano</configuration>
           <configuration>dNano-OAD-ImgA</configuration>
           <configuration>dNano-OAD-ImgB</configuration>
+          <configuration>MiniZ-BLDC</configuration>
+          <configuration>MiniZ-BLDC-ImgA</configuration>
+          <configuration>MiniZ-BLDC-ImgB</configuration>
           <configuration>Simple</configuration>
           <configuration>Simple-OAD-ImgA</configuration>
           <configuration>Simple-OAD-ImgB</configuration>
@@ -22485,7 +22503,7 @@
       <excluded>
         <configuration>CC2541</configuration>
         <configuration>MiniZ-BLDC-Hack</configuration>
-        <configuration>Mini-Z-BLDC</configuration>
+        <configuration>MiniZ-BLDC</configuration>
         <configuration>MiniZ-BLDC-ImgB</configuration>
         <configuration>Simple</configuration>
         <configuration>Simple-OAD-ImgA</configuration>
@@ -22504,6 +22522,9 @@
         <configuration>dNano</configuration>
         <configuration>dNano-OAD-ImgA</configuration>
         <configuration>dNano-OAD-ImgB</configuration>
+        <configuration>MiniZ-BLDC</configuration>
+        <configuration>MiniZ-BLDC-ImgA</configuration>
+        <configuration>MiniZ-BLDC-ImgB</configuration>
         <configuration>Simple</configuration>
         <configuration>Simple-OAD-ImgA</configuration>
         <configuration>Simple-OAD-ImgB</configuration>
@@ -22523,7 +22544,7 @@
         <configuration>dNano-OAD-ImgA</configuration>
         <configuration>dNano-OAD-ImgB</configuration>
         <configuration>MiniZ-BLDC-Hack</configuration>
-        <configuration>Mini-Z-BLDC</configuration>
+        <configuration>MiniZ-BLDC</configuration>
         <configuration>MiniZ-BLDC-ImgA</configuration>
         <configuration>MiniZ-BLDC-ImgB</configuration>
         <configuration>Simple</configuration>
@@ -22562,7 +22583,8 @@
         <configuration>dNano</configuration>
         <configuration>dNano-OAD-ImgA</configuration>
         <configuration>dNano-OAD-ImgB</configuration>
-        <configuration>Mini-Z-BLDC</configuration>
+        <configuration>MiniZ-BLDC</configuration>
+        <configuration>MiniZ-BLDC-ImgA</configuration>
         <configuration>MiniZ-BLDC-ImgB</configuration>
         <configuration>Simple</configuration>
         <configuration>Simple-OAD-ImgA</configuration>
@@ -22576,6 +22598,9 @@
         <configuration>dNano</configuration>
         <configuration>dNano-OAD-ImgA</configuration>
         <configuration>dNano-OAD-ImgB</configuration>
+        <configuration>MiniZ-BLDC</configuration>
+        <configuration>MiniZ-BLDC-ImgA</configuration>
+        <configuration>MiniZ-BLDC-ImgB</configuration>
       </excluded>
     </file>
     <file>
@@ -22586,7 +22611,8 @@
         <configuration>dNano-OAD-ImgA</configuration>
         <configuration>dNano-OAD-ImgB</configuration>
         <configuration>MiniZ-BLDC-Hack</configuration>
-        <configuration>Mini-Z-BLDC</configuration>
+        <configuration>MiniZ-BLDC</configuration>
+        <configuration>MiniZ-BLDC-ImgA</configuration>
         <configuration>MiniZ-BLDC-ImgB</configuration>
         <configuration>EscServo</configuration>
         <configuration>EscServo-OAD-ImgA</configuration>
@@ -22604,42 +22630,9 @@
         <configuration>dNano-OAD-ImgA</configuration>
         <configuration>dNano-OAD-ImgB</configuration>
         <configuration>MiniZ-BLDC-Hack</configuration>
-        <configuration>Mini-Z-BLDC</configuration>
+        <configuration>MiniZ-BLDC</configuration>
+        <configuration>MiniZ-BLDC-ImgA</configuration>
         <configuration>MiniZ-BLDC-ImgB</configuration>
-        <configuration>Simple</configuration>
-        <configuration>Simple-OAD-ImgA</configuration>
-        <configuration>Simple-OAD-ImgB</configuration>
-        <configuration>EscServo</configuration>
-        <configuration>EscServo-OAD-ImgA</configuration>
-        <configuration>EscServo-OAD-ImgB</configuration>
-        <configuration>EscServoLarge</configuration>
-        <configuration>EscServoLarge-OAD-ImgA</configuration>
-        <configuration>EscServoLarge-OAD-ImgB</configuration>
-      </excluded>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Source\hal_temp.h</name>
-      <excluded>
-        <configuration>dNano</configuration>
-        <configuration>dNano-OAD-ImgA</configuration>
-        <configuration>dNano-OAD-ImgB</configuration>
-        <configuration>Simple</configuration>
-        <configuration>Simple-OAD-ImgA</configuration>
-        <configuration>Simple-OAD-ImgB</configuration>
-        <configuration>EscServo</configuration>
-        <configuration>EscServo-OAD-ImgA</configuration>
-        <configuration>EscServo-OAD-ImgB</configuration>
-        <configuration>EscServoLarge</configuration>
-        <configuration>EscServoLarge-OAD-ImgA</configuration>
-        <configuration>EscServoLarge-OAD-ImgB</configuration>
-      </excluded>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Source\hal_temp_internal.c</name>
-      <excluded>
-        <configuration>dNano</configuration>
-        <configuration>dNano-OAD-ImgA</configuration>
-        <configuration>dNano-OAD-ImgB</configuration>
         <configuration>Simple</configuration>
         <configuration>Simple-OAD-ImgA</configuration>
         <configuration>Simple-OAD-ImgB</configuration>
@@ -22915,7 +22908,7 @@
         <configuration>CC2541</configuration>
         <configuration>dNano</configuration>
         <configuration>MiniZ-BLDC-Hack</configuration>
-        <configuration>Mini-Z-BLDC</configuration>
+        <configuration>MiniZ-BLDC</configuration>
         <configuration>Simple</configuration>
         <configuration>EscServo</configuration>
         <configuration>EscServoLarge</configuration>
@@ -22927,7 +22920,7 @@
         <configuration>CC2541</configuration>
         <configuration>dNano</configuration>
         <configuration>MiniZ-BLDC-Hack</configuration>
-        <configuration>Mini-Z-BLDC</configuration>
+        <configuration>MiniZ-BLDC</configuration>
         <configuration>Simple</configuration>
         <configuration>EscServo</configuration>
         <configuration>EscServoLarge</configuration>
@@ -22939,7 +22932,7 @@
         <configuration>CC2541</configuration>
         <configuration>dNano</configuration>
         <configuration>MiniZ-BLDC-Hack</configuration>
-        <configuration>Mini-Z-BLDC</configuration>
+        <configuration>MiniZ-BLDC</configuration>
         <configuration>Simple</configuration>
         <configuration>EscServo</configuration>
         <configuration>EscServoLarge</configuration>
