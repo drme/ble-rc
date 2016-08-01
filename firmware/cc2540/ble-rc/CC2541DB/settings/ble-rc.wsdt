@@ -3,7 +3,7 @@
 <Workspace>
   <ConfigDictionary>
     
-  <CurrentConfigs><Project>ble-rc/MiniZ-BLDC-ImgB</Project></CurrentConfigs></ConfigDictionary>
+  <CurrentConfigs><Project>ble-rc/MiniZ-OAD-ImgB</Project></CurrentConfigs></ConfigDictionary>
   <Desktop>
     <Static>
       <Workspace>
@@ -24,7 +24,7 @@
     <Windows>
       
       
-    <Wnd2>
+    <Wnd0>
         <Tabs>
           <Tab>
             <Identity>TabID-11505-31309</Identity>
@@ -32,11 +32,11 @@
             <Factory>Workspace</Factory>
             <Session>
               
-            <NodeDict><ExpandedNode>ble-rc</ExpandedNode><ExpandedNode>ble-rc/APP</ExpandedNode><ExpandedNode>ble-rc/APP/Drivers</ExpandedNode></NodeDict></Session>
+            <NodeDict><ExpandedNode>ble-rc</ExpandedNode><ExpandedNode>ble-rc/APP</ExpandedNode></NodeDict></Session>
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
         <Tabs>
           <Tab>
             <Identity>TabID-19995-31969</Identity>
@@ -46,20 +46,20 @@
           </Tab>
         <Tab><Identity>TabID-16903-11724</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
     <Editor>
       
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\devinfoservice-st.c</Filename><XPos>0</XPos><YPos>12</YPos><SelStart>2863</SelStart><SelEnd>2863</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\car_control_mini_z_bldc.c</Filename><XPos>0</XPos><YPos>355</YPos><SelStart>7657</SelStart><SelEnd>7657</SelEnd></Tab><ActiveTab>1</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\car_control.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\car_control_dnano.c</Filename><XPos>0</XPos><YPos>337</YPos><SelStart>6633</SelStart><SelEnd>6700</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\devinfoservice-st.c</Filename><XPos>0</XPos><YPos>6</YPos><SelStart>2881</SelStart><SelEnd>2900</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\car_control_mini_z.c</Filename><XPos>0</XPos><YPos>368</YPos><SelStart>7520</SelStart><SelEnd>7520</SelEnd></Tab><ActiveTab>1</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\car_control_dnano.c</Filename><XPos>0</XPos><YPos>325</YPos><SelStart>6633</SelStart><SelEnd>6700</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-048a1ba8><key>iaridepm.enu1</key></Toolbar-048a1ba8></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>1580</Bottom><Right>511</Right><x>-2</x><y>-2</y><xscreen>2165760</xscreen><yscreen>1043941</yscreen><sizeHorzCX>564000000</sizeHorzCX><sizeHorzCY>500211308</sizeHorzCY><sizeVertCX>133594</sizeVertCX><sizeVertCY>758026</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>462</Bottom><Right>3842</Right><x>-2</x><y>-2</y><xscreen>3844</xscreen><yscreen>464</yscreen><sizeHorzCX>1001042</sizeHorzCX><sizeHorzCY>222329</sizeHorzCY><sizeVertCX>564000000</sizeVertCX><sizeVertCY>500211308</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-048a1ba8><key>iaridepm.enu1</key></Toolbar-048a1ba8></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>1580</Bottom><Right>511</Right><x>-2</x><y>-2</y><xscreen>2165760</xscreen><yscreen>1043941</yscreen><sizeHorzCX>564000000</sizeHorzCX><sizeHorzCY>500211308</sizeHorzCY><sizeVertCX>133594</sizeVertCX><sizeVertCY>758026</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>462</Bottom><Right>3842</Right><x>-2</x><y>-2</y><xscreen>3844</xscreen><yscreen>464</yscreen><sizeHorzCX>1001042</sizeHorzCX><sizeHorzCY>222329</sizeHorzCY><sizeVertCX>564000000</sizeVertCX><sizeVertCY>500211308</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 

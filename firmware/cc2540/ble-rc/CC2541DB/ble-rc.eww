@@ -9,7 +9,7 @@
       <name>All</name>
       <member>
         <project>ble-rc</project>
-        <configuration>CC2541</configuration>
+        <configuration>MiniZ</configuration>
       </member>
       <member>
         <project>ble-rc</project>

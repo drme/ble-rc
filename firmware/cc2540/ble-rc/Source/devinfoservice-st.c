@@ -46,6 +46,8 @@ static uint8 devInfoPnpIdProps = GATT_PROP_READ;
 	static const uint8 devInfoHardwareRev[]  = "dNano";
 #elif defined (FIRMWARE_TYPE_MINIZBLDC)
 	static const uint8 devInfoHardwareRev[]  = "Mini-Z BLDC";
+#elif defined (FIRMWARE_TYPE_MINIZ)
+	static const uint8 devInfoHardwareRev[]  = "Mini-Z";
 #else
 	#error "undefined type"
 #endif
