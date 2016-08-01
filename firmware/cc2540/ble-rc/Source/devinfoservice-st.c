@@ -42,8 +42,10 @@ static uint8 devInfoPnpIdProps = GATT_PROP_READ;
 	static const uint8 devInfoHardwareRev[]  = "EscServo";
 #elif defined (FIRMWARE_TYPE_ESCSERVO2)
 	static const uint8 devInfoHardwareRev[]  = "EscServo2";
+#elif defined (FIRMWARE_TYPE_DNANO)
+	static const uint8 devInfoHardwareRev[]  = "dNano";
 #else
-	#error "undefined type"55
+	#error "undefined type"
 #endif
 
 #if defined(HAL_IMAGE_A)
