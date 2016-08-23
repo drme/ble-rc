@@ -14,14 +14,14 @@
         android:text=""
         android:visibility="invisible" />
 
-    <eu.sarunas.apps.android.racecar.ThumbStickView
+    <eu.sarunas.apps.android.racecar.utils.ThumbStickView
         android:id="@+id/thumbStickViewSteering"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="40"
         android:rotation="90" />
 
-    <eu.sarunas.apps.android.racecar.ThumbStickView
+    <eu.sarunas.apps.android.racecar.utils.ThumbStickView
         android:id="@+id/thumbStickViewThrottle"
         android:layout_width="match_parent"
         android:layout_height="0dp"

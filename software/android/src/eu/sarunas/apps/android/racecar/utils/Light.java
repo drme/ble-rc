@@ -1,8 +1,8 @@
-package eu.sarunas.apps.android.racecar;
+package eu.sarunas.apps.android.racecar.utils;
 
 import android.view.MenuItem;
 
-class Light
+public class Light
 {
 	public Light(MenuItem menuItem, boolean enabled)
 	{

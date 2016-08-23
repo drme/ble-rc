@@ -16,7 +16,8 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.ParcelUuid;
 import eu.sarunas.apps.android.racecar.R;
-import eu.sarunas.apps.android.racecar.Scanner;
+import eu.sarunas.apps.android.racecar.scanner.IScanCallback;
+import eu.sarunas.apps.android.racecar.scanner.Scanner;
 
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
 public class Scanner21 extends Scanner

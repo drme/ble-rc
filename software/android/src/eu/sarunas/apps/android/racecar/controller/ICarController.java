@@ -1,4 +1,4 @@
-package eu.sarunas.apps.android.racecar;
+package eu.sarunas.apps.android.racecar.controller;
 
 import eu.sarunas.apps.android.racecar.firmware.IFirmwareUpdater;
 
@@ -95,14 +95,7 @@ public abstract class ICarController
 	{
 		if (this.type == DeviceType.Unknown)
 		{
-			int capabilities = getCapabilities();
-
-			if (capabilities == 0)
-			{
-				return DeviceType.Simple;
-			}
-
-			return DeviceType.getType(capabilities);
+			return DeviceType.Simple;
 		}
 		else
 		{
@@ -134,8 +127,6 @@ public abstract class ICarController
 		return 700;
 	};
 	
-	public abstract Object getHandle();
-
 	private String address = null;
 	private DeviceType type = DeviceType.Unknown;
 };

@@ -1,4 +1,4 @@
-package eu.sarunas.apps.android.racecar;
+package eu.sarunas.apps.android.racecar.ble;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -15,21 +15,15 @@ import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 import android.util.Log;
-import eu.sarunas.apps.android.racecar.ble.CharacteristicProxy;
-import eu.sarunas.apps.android.racecar.firmware.FirmwareUpdater;
+import eu.sarunas.apps.android.racecar.controller.DeviceType;
+import eu.sarunas.apps.android.racecar.controller.ICarController;
+import eu.sarunas.apps.android.racecar.controller.IConnectionHandler;
+import eu.sarunas.apps.android.racecar.controller.LightsController;
 import eu.sarunas.apps.android.racecar.firmware.UpdateState;
 
 @SuppressLint("NewApi")
 public class BLECarController extends ICarController
 {
-	public BLECarController(BluetoothDevice device, String name, DeviceType type)
-	{
-		super(device.getAddress(), type);
-
-		this.device = device;
-		this.advertisementName = name;
-	}
-
 	public BLECarController(String address, Activity activity, DeviceType type, IConnectionHandler connectionHandler) throws IOException
 	{
 		super(address, type);
@@ -560,12 +554,6 @@ public class BLECarController extends ICarController
 	public void setReverseLights(boolean on)
 	{
 		this.lightsController.setReverseLights(on);
-	};
-
-	@Override
-	public Object getHandle()
-	{
-		return this.device;
 	};
 
 	public FirmwareUpdater getUpdater()

@@ -1,4 +1,4 @@
-package eu.sarunas.apps.android.racecar;
+package eu.sarunas.apps.android.racecar.utils;
 
 import android.widget.TextView;
 

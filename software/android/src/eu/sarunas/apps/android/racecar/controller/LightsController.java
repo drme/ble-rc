@@ -1,8 +1,8 @@
-package eu.sarunas.apps.android.racecar;
+package eu.sarunas.apps.android.racecar.controller;
 
 import eu.sarunas.apps.android.racecar.ble.CharacteristicProxy;
 
-class LightsController
+public class LightsController
 {
 	public LightsController(CharacteristicProxy lightsProxy)
 	{

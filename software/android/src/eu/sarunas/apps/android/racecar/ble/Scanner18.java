@@ -9,7 +9,8 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import eu.sarunas.apps.android.racecar.R;
-import eu.sarunas.apps.android.racecar.Scanner;
+import eu.sarunas.apps.android.racecar.scanner.IScanCallback;
+import eu.sarunas.apps.android.racecar.scanner.Scanner;
 
 @SuppressWarnings("deprecation")
 @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)

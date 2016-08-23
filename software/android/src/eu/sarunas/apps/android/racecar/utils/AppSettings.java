@@ -1,4 +1,4 @@
-package eu.sarunas.apps.android.racecar;
+package eu.sarunas.apps.android.racecar.utils;
 
 import android.annotation.TargetApi;
 import android.app.ActionBar;
@@ -10,9 +10,12 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.view.Window;
 import android.view.WindowManager;
+import eu.sarunas.apps.android.racecar.AppType;
+import eu.sarunas.apps.android.racecar.R;
+import eu.sarunas.apps.android.racecar.Target;
 
 @TargetApi(21)
-class AppSettings
+public class AppSettings
 {
 	public enum AccelerometerAxis
 	{

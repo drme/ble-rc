@@ -17,8 +17,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
-import eu.sarunas.apps.android.racecar.ble.IScanCallback;
-import eu.sarunas.apps.android.racecar.wifi.WifiCarController;
+import eu.sarunas.apps.android.racecar.controller.CarsController;
+import eu.sarunas.apps.android.racecar.scanner.DiscoveredDevice;
+import eu.sarunas.apps.android.racecar.scanner.IScanCallback;
+import eu.sarunas.apps.android.racecar.utils.AppSettings;
+import eu.sarunas.apps.android.racecar.utils.DeviceListAdapter;
 
 public class DeviceScanActivity extends ListActivity implements IScanCallback
 {
@@ -67,7 +70,7 @@ public class DeviceScanActivity extends ListActivity implements IScanCallback
 				CarsController.getInstance().stopScan();
 				break;
 			case R.id.menu_get_cars:
-				String url = (Target.current == AppType.SmartRacer) ? "https://www.tindie.com/products/some1/smart-racer-wifi/" : "https://www.tindie.com/products/SingletonLabs/ble-for-mini-z/";
+				String url = (Target.current == AppType.SmartRacer) ? "https://www.tindie.com/products/some1/smart-racer/" : "https://www.tindie.com/products/SingletonLabs/ble-for-mini-z/";
 				Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
 				startActivity(browserIntent);
 				overridePendingTransition(R.anim.activity_back_in, R.anim.activity_back_out);
@@ -145,7 +148,7 @@ public class DeviceScanActivity extends ListActivity implements IScanCallback
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id)
 	{
-		ICarController car = this.deviceListAdapter.getDevice(position);
+		DiscoveredDevice car = this.deviceListAdapter.getDevice(position);
 
 		if (null == car)
 		{
@@ -157,17 +160,7 @@ public class DeviceScanActivity extends ListActivity implements IScanCallback
 		Bundle data = new Bundle();
 		data.putString(BluetoothDevice.EXTRA_DEVICE, car.getAddress());
 		data.putString(BluetoothDevice.EXTRA_NAME, car.getName());
-		data.putInt(DeviceScanActivity.DEVICE_TYPE, car.getType().getId());
 		
-		if (car instanceof BLECarController)
-		{
-			data.putBoolean("LE", true);
-		}
-		else if (car instanceof WifiCarController)
-		{
-			data.putString(DeviceScanActivity.SCAN_RECORD, car.getAddress());
-		}
-
 		Intent result = new Intent();
 		result.putExtras(data);
 
@@ -192,14 +185,14 @@ public class DeviceScanActivity extends ListActivity implements IScanCallback
 	};
 
 	@Override
-	public void onCarFound(final ICarController car)
+	public void onCarFound(final DiscoveredDevice car)
 	{
 		runOnUiThread(new Runnable()
 		{
 			@Override
 			public void run()
 			{
-				DeviceScanActivity.this.deviceListAdapter.addDevice(car.getHandle(), car.getName(), car.getType(), car);
+				DeviceScanActivity.this.deviceListAdapter.addDevice(car);
 			}
 		});
 	};
@@ -221,9 +214,6 @@ public class DeviceScanActivity extends ListActivity implements IScanCallback
 	@Override
 	public void onError(final int messageId)
 	{
-		this.scanning = false;
-		invalidateOptionsMenu();
-
 		if (messageId != -1)
 		{
 			runOnUiThread(new Runnable()
@@ -253,6 +243,4 @@ public class DeviceScanActivity extends ListActivity implements IScanCallback
 	private boolean scanning = false;
 	private static final int REQUEST_ENABLE_BT = 1;
 	private static final long SCAN_PERIOD = 10000;
-	public static final String DEVICE_TYPE = "asd.DEVICE_TYPE";
-	public static final String SCAN_RECORD = "asd.SCAN_RECORD";
 };

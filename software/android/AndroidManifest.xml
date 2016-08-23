@@ -1,98 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="eu.sarunas.apps.android.racecar"
-    android:versionCode="51"
-    android:versionName="5.1" >
 
-    <uses-feature
-        android:name="android.hardware.bluetooth_le"
-        android:required="true" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="eu.sarunas.apps.android.racecar" android:installLocation="preferExternal" android:versionCode="52" android:versionName="5.2">
+	<uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+	<uses-permission android:name="android.permission.BLUETOOTH"/>
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/> 
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-		<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
- 		<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> 
-    
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 		
- 		
-    <uses-sdk
-        android:minSdkVersion="15"
-        android:targetSdkVersion="21" />
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="21"/>
 
-    <application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/smart_racer_name"
-        android:theme="@style/Theme.Smart_racer" >
-        <activity
-            android:name="MainActivity"
-            android:configChanges="orientation|keyboard|screenSize"
-            android:label="@string/smart_racer_title_activity_main"
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+	<application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/smart_racer_name" android:theme="@style/Theme.Smart_racer">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="DeviceScanActivity"
-            android:icon="@drawable/car"
-            android:label="@string/title_devices"
-            android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-        <activity
-            android:name="CarSettingsActivity"
-            android:icon="@drawable/car"
-            android:label="@string/title_activity_car_settings"
-            android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-        
-        
-        <activity
-            android:name="FirmwareUpdateActivity"
+		<activity android:name="MainActivity" android:configChanges="orientation|keyboard|screenSize" android:label="@string/smart_racer_title_activity_main" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
 
-android:label="@string/update_firmware"
+		<activity android:name="DeviceScanActivity" android:icon="@drawable/car" android:label="@string/title_devices" android:screenOrientation="portrait">
+			<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+		</activity>
 
-            android:screenOrientation="portrait" >
-            
-            
-    
-                    <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-                        
-            
-            </activity>
-        
-        
-        
-        <activity
-            android:name="FirmwareFileSelectActivity"
-            
-android:label="Select firmware"
-            
-            
-            android:screenOrientation="portrait" >
-            
-                
-                    <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".FirmwareUpdateActivity" />
-            
-        
-            
-            
-            
-            
-        </activity>
-    </application>
+		<activity android:name="CarSettingsActivity" android:icon="@drawable/car" android:label="@string/title_activity_car_settings" android:screenOrientation="portrait">
+			<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+		</activity>
 
+		<activity android:name="FirmwareUpdateActivity" android:label="@string/update_firmware" android:screenOrientation="portrait">
+			<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+		</activity>
+
+		<activity android:name="FirmwareFileSelectActivity" android:label="Select firmware" android:screenOrientation="portrait">
+			<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".FirmwareUpdateActivity"/>
+		</activity>
+
+	</application>
 </manifest>

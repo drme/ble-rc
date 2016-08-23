@@ -1,9 +1,9 @@
-package eu.sarunas.apps.android.racecar;
+package eu.sarunas.apps.android.racecar.scanner;
 
 import java.util.Arrays;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
-import eu.sarunas.apps.android.racecar.ble.IScanCallback;
+import eu.sarunas.apps.android.racecar.controller.DeviceType;
 
 public class Scanner
 {
@@ -133,7 +133,7 @@ public class Scanner
 
 		if (true == valid)
 		{
-			this.callBack.onCarFound(new BLECarController(device, name.toString(), deviceType));
+			this.callBack.onCarFound(new DiscoveredDevice(device.getAddress(), name.toString(), deviceType));
 		}
 	};
 

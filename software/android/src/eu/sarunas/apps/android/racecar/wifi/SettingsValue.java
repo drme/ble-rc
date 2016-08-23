@@ -161,9 +161,9 @@ class SettingsValue
 
 			this.stringValue = sb.toString().trim();
 		}
-		catch (Exception e)
+		catch (Throwable ex)
 		{
-			e.printStackTrace();
+			ex.printStackTrace();
 		}
 		finally
 		{

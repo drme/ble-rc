@@ -8,7 +8,6 @@ import java.net.DatagramSocket;
 import java.net.HttpURLConnection;
 import java.net.InetAddress;
 import java.net.URL;
-import java.util.Locale;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import android.app.Activity;
@@ -16,34 +15,32 @@ import android.content.Context;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
-import eu.sarunas.apps.android.racecar.DeviceType;
-import eu.sarunas.apps.android.racecar.ICarController;
-import eu.sarunas.apps.android.racecar.IConnectionHandler;
+import eu.sarunas.apps.android.racecar.controller.DeviceType;
+import eu.sarunas.apps.android.racecar.controller.ICarController;
+import eu.sarunas.apps.android.racecar.controller.IConnectionHandler;
 import eu.sarunas.apps.android.racecar.firmware.IFirmwareUpdater;
 
 public class WifiCarController extends ICarController
 {
-	protected WifiCarController(ScanResult scanResult, DeviceType type)
+	public WifiCarController(String address, String ssid, Activity activity, IConnectionHandler connectionHandler)
 	{
-		super(scanResult.BSSID.toUpperCase(Locale.FRANCE), type);
-
-		this.scanResult = scanResult;
-	};
-
-	public WifiCarController(final String address, final Activity activity, DeviceType type, final IConnectionHandler connectionHandler)
-	{
-		super(address, type);
+		super(address, DeviceType.RC);
 
 		this.activity = activity;
 		this.connectionHandler = connectionHandler;
 
-		connectToWiFi(address, activity);
+		connectToWiFi(address, ssid, activity);
 	};
 
-	public void connectToServer()
+	public synchronized void connectToServer()
 	{
 		try
 		{
+			if (null != this.socket)
+			{
+				return;
+			}
+			
 			this.socket = new DatagramSocket();
 			this.inetAddress = InetAddress.getByName(WifiCarController.defaultIp);
 
@@ -63,7 +60,7 @@ public class WifiCarController extends ICarController
 					WifiCarController.this.minThrottle.refreshValueInt();
 					WifiCarController.this.maxThrottle.refreshValueInt();
 					WifiCarController.this.centerThrottle.refreshValueInt();
-					WifiCarController.this.batteryStatus.refreshValueInt();
+					//WifiCarController.this.batteryStatus.refreshValueInt();
 
 					WifiCarController.this.connectionHandler.onConnected(WifiCarController.this);
 
@@ -87,6 +84,7 @@ public class WifiCarController extends ICarController
 			this.connectionHandler.onDisconnected(this, ex.getMessage());
 			this.connected = false;
 			this.connectionHandler = null;
+			this.socket = null;
 		}
 	};
 	
@@ -158,14 +156,14 @@ public class WifiCarController extends ICarController
 		}		
 	};
 
-	private void connectToWiFi(String bsid, Activity activity)
+	private void connectToWiFi(String bsid, String ssid, Activity activity)
 	{
 		new Thread(new Runnable()
 		{
 			@Override
 			public void run()
 			{
-				sleep(10000);
+				sleep(60000);
 
 				if (false == WifiCarController.this.connected)
 				{
@@ -176,6 +174,7 @@ public class WifiCarController extends ICarController
 
 		WifiConfiguration conf = new WifiConfiguration();
 
+		conf.SSID = "\"" + ssid + "\"";
 		conf.BSSID = bsid;
 		conf.preSharedKey = "\"" + WifiCarController.networkPass + "\"";
 
@@ -213,7 +212,7 @@ public class WifiCarController extends ICarController
 		closeConnection();
 	};
 
-	private void closeConnection()
+	private synchronized void closeConnection()
 	{
 		this.connected = false;
 
@@ -223,6 +222,12 @@ public class WifiCarController extends ICarController
 			this.connectionHandler = null;
 		}
 
+		if (null != this.socket)
+		{
+			this.socket.close();
+			this.socket = null;
+		}
+		
 /*		if ((null != this.connectionStateHandler) && (null != this.activity))
 		{
 			try
@@ -338,8 +343,13 @@ public class WifiCarController extends ICarController
 		return ret;
 	};
 
-	private void sendValues()
+	private synchronized void sendValues()
 	{
+		if (null == this.socket)
+		{
+			return;
+		}
+		
 		try
 		{
 			byte[] message = new byte[4];
@@ -512,12 +522,6 @@ public class WifiCarController extends ICarController
 	public IFirmwareUpdater getUpdater()
 	{
 		return this.updater;
-	};
-
-	@Override
-	public Object getHandle()
-	{
-		return this;
 	};
 
 	@Override

@@ -1,9 +1,10 @@
-package eu.sarunas.apps.android.racecar.firmware;
+package eu.sarunas.apps.android.racecar.ble;
 
 import java.nio.charset.Charset;
-import eu.sarunas.apps.android.racecar.ble.CharacteristicProxy;
-import eu.sarunas.apps.android.racecar.ble.CommandsQueue;
-import eu.sarunas.apps.android.racecar.ble.ICharacteristicDataHandler;
+import eu.sarunas.apps.android.racecar.firmware.IFirmwareUpdater;
+import eu.sarunas.apps.android.racecar.firmware.IUpdateProgressListener;
+import eu.sarunas.apps.android.racecar.firmware.ImageHeader;
+import eu.sarunas.apps.android.racecar.firmware.UpdateState;
 
 public class FirmwareUpdater extends IFirmwareUpdater
 {

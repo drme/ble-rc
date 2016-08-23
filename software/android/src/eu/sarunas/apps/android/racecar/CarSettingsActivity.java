@@ -23,6 +23,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
+import eu.sarunas.apps.android.racecar.controller.CarsController;
+import eu.sarunas.apps.android.racecar.controller.DeviceType;
+import eu.sarunas.apps.android.racecar.utils.AppSettings;
 import android.widget.TextView;
 
 public class CarSettingsActivity extends FragmentActivity

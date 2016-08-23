@@ -27,8 +27,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewConfiguration;
 import android.widget.Toast;
-import eu.sarunas.apps.android.racecar.ThumbStickView.IValueChanged;
-import eu.sarunas.apps.android.racecar.wifi.WifiCarController;
+import eu.sarunas.apps.android.racecar.controller.CarsController;
+import eu.sarunas.apps.android.racecar.controller.ICarController;
+import eu.sarunas.apps.android.racecar.controller.IConnectionHandler;
+import eu.sarunas.apps.android.racecar.utils.AppSettings;
+import eu.sarunas.apps.android.racecar.utils.Light;
+import eu.sarunas.apps.android.racecar.utils.ThumbStickView;
+import eu.sarunas.apps.android.racecar.utils.ThumbStickView.IValueChanged;
 
 public class MainActivity extends Activity implements SensorEventListener
 {
@@ -372,15 +377,9 @@ public class MainActivity extends Activity implements SensorEventListener
 				updateControlls(null);
 				
 				String deviceAddress = data.getExtras().getString(BluetoothDevice.EXTRA_DEVICE);
+				String deviceName = data.getExtras().getString(BluetoothDevice.EXTRA_NAME);
 				
-				if (null != data.getExtras().getString(DeviceScanActivity.SCAN_RECORD))
-				{
-					connectLE(WifiCarController.wifiPrefix + data.getExtras().getString(DeviceScanActivity.SCAN_RECORD), data.getExtras().getString(BluetoothDevice.EXTRA_NAME), DeviceType.getType(data.getExtras().getInt(DeviceScanActivity.DEVICE_TYPE)));
-				}
-				else
-				{
-					connectLE(deviceAddress, data.getExtras().getString(BluetoothDevice.EXTRA_NAME), DeviceType.getType(data.getExtras().getInt(DeviceScanActivity.DEVICE_TYPE)));
-				}
+				connect(deviceAddress, deviceName);
 			}
 			else
 			{
@@ -401,7 +400,7 @@ public class MainActivity extends Activity implements SensorEventListener
 		}
 	};
 
-	private void connectLE(final String deviceAddress, final String name, DeviceType type)
+	private void connect(final String deviceAddress, final String name)
 	{
 		updateControlls(null);
 		
@@ -418,7 +417,7 @@ public class MainActivity extends Activity implements SensorEventListener
 
 		try
 		{
-			CarsController.getInstance().connect(deviceAddress, (name != null ? name : deviceAddress), this, type, new IConnectionHandler()
+			CarsController.getInstance().connect(deviceAddress, (name != null ? name : deviceAddress), this, new IConnectionHandler()
 			{
 				@Override
 				public void onDisconnected(final Object client, final String message)

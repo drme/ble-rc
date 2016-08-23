@@ -1,13 +1,16 @@
-package eu.sarunas.apps.android.racecar;
+package eu.sarunas.apps.android.racecar.demo;
 
 import java.util.Random;
 import android.app.Activity;
-import eu.sarunas.apps.android.racecar.firmware.FirmwareUpdater;
+import eu.sarunas.apps.android.racecar.ble.FirmwareUpdater;
+import eu.sarunas.apps.android.racecar.controller.DeviceType;
+import eu.sarunas.apps.android.racecar.controller.ICarController;
+import eu.sarunas.apps.android.racecar.controller.IConnectionHandler;
 import eu.sarunas.apps.android.racecar.firmware.IUpdateProgressListener;
 
-class DemoCarController extends ICarController
+public class DemoCarController extends ICarController
 {
-	protected DemoCarController(String name)
+	private DemoCarController(String name)
 	{
 		super(null, DeviceType.MiniZ);
 
@@ -120,12 +123,6 @@ class DemoCarController extends ICarController
 	public int getCurrentUsage()
 	{
 		return 0;
-	};
-
-	@Override
-	public Object getHandle()
-	{
-		return null;
 	};
 
 	@Override

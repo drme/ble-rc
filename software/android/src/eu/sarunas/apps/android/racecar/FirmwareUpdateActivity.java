@@ -16,10 +16,13 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import eu.sarunas.apps.android.racecar.controller.CarsController;
+import eu.sarunas.apps.android.racecar.controller.ICarController;
 import eu.sarunas.apps.android.racecar.firmware.IFirmwareUpdater;
 import eu.sarunas.apps.android.racecar.firmware.IUpdateProgressListener;
 import eu.sarunas.apps.android.racecar.firmware.ImageHeader;
 import eu.sarunas.apps.android.racecar.firmware.UpdateState;
+import eu.sarunas.apps.android.racecar.utils.AppSettings;
 
 @TargetApi(18)
 public class FirmwareUpdateActivity extends Activity

@@ -1,4 +1,4 @@
-package eu.sarunas.apps.android.racecar;
+package eu.sarunas.apps.android.racecar.utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-class ThumbStickView extends View implements View.OnTouchListener
+public class ThumbStickView extends View implements View.OnTouchListener
 {
 	@SuppressLint("ClickableViewAccessibility")
 	public ThumbStickView(Context context, AttributeSet attrs)
